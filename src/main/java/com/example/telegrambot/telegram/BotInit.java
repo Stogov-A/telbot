@@ -1,4 +1,4 @@
-package com.example.telegrambot;
+package com.example.telegrambot.telegram;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -10,12 +10,12 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 @Component
-public class BotInitializer {
+public class BotInit {
 
     private final Bot bot;
 
     @Autowired
-    public BotInitializer(Bot bot) {
+    public BotInit(Bot bot) {
         this.bot = bot;
     }
 
