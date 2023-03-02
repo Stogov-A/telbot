@@ -64,7 +64,10 @@ public class ResponseMessageBuilder {
         }
         busDepartureTime = timeBus494FromHouse;
         LocalDateTime timeBusInBel = scheduleService.getTimeFromHomeToBel(timeBus494FromHouse);
-        return String.format(ANSWER_FROM_HOME_TO_BEL, timeBus494FromHouse, timeBusInBel);
+        return String.format(
+                ANSWER_FROM_HOME_TO_BEL,
+                timeBus494FromHouse.format(FORMATTER),
+                timeBusInBel.format(FORMATTER));
     }
 
     public String getAnsErrReminder() {
