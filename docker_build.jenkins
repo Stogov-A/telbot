@@ -13,17 +13,12 @@ pipeline{
     }
 
     stages{
-        stage("First step"){
+        stage("create docker image"){
             steps{
-                echo "+++++++++++++ start building image +++++++++++++"
+                echo "================== start build image =================="
                 dir('docker/toolbox'){
                     sh 'docker build . '
                 }
-            }
-        }
-        stage("Second step"){
-            steps{
-                sh 'ssh root@dagiserver \'uptime\''
             }
         }
     }
