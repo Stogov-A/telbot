@@ -1,11 +1,4 @@
 FROM openjdk:17
 
-WORKDIR /app
-
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-RUN ./mvnw dependency:resolve
-
-COPY src ./src
-
-CMD ["./mvnw", "spring-boot:run"]
+COPY target/telegramBot-0.0.1-SNAPSHOT.jar telegramBot-0.0.1.jar
+ENTRYPOINT ["java","-jar","/telegramBot-0.0.1.jar"]
