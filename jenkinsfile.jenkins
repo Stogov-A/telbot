@@ -15,12 +15,12 @@ pipeline{
     stages{
         stage("First step"){
             steps{
-                sh 'ssh root@dagiserver \'hostname\''
+                sh 'ssh root@ubuntu \'hostname\''
             }
         }
         stage("Second step"){
             steps{
-                sh 'ssh root@dagiserver \'uptime\''
+                sh 'ssh root@ubuntu \'uptime\''
             }
         }
     }
