@@ -1,10 +1,5 @@
 FROM openjdk:17 as build
 
-COPY .mvn .mvn
-COPY mvnw .
-COPY pom.xml .
-COPY src src
-
 RUN ./mvnw -B package
 
 
