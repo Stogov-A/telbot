@@ -1,6 +1,9 @@
-FROM openjdk:17 as build
 
-RUN ./mvnw -B package
+FROM maven:latest AS build
+COPY . .
+RUN mvn -f pom.xml clean package
+
+
 
 
 FROM openjdk:17
