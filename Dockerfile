@@ -8,7 +8,7 @@ RUN mvn package
 
 
 
-FROM openjdk:17
+FROM openjdk:11
 
 COPY --from=build target/telegramBot-0.0.1-SNAPSHOT.jar telegramBot-0.0.1.jar
 
