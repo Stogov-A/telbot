@@ -1,9 +1,9 @@
-
-FROM maven:latest AS build
-COPY pom.xml /app/
-WORKDIR /app/
-
-RUN mvn clean package
+FROM maven:alpine as build
+ENV HOME=/usr/app
+RUN mkdir -p $HOME
+WORKDIR $HOME
+ADD . $HOME
+RUN mvn package
 
 
 
