@@ -16,7 +16,6 @@
     <name>telegramBot</name>
     <description>telegramBot</description>
     <properties>
-        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
