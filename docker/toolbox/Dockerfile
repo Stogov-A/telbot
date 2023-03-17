@@ -1,6 +1,7 @@
 
 FROM maven:latest AS build
-COPY . .
+COPY pom.xml pom.xml
+
 RUN mvn clean package
 
 
