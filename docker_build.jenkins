@@ -25,7 +25,7 @@ pipeline{
         }
         stage("Second step"){
             steps{
-                sh 'ssh root@dagiserver \'uptime\''
+                sh 'ssh ubuntu@ubuntu \'uptime\''
             }
         }
     }
