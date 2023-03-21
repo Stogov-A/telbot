@@ -22,10 +22,10 @@ pipeline{
                     sh 'docker build . '
                 }
             }
-            stage("Second step"){
-                steps{
-                    sh 'ssh root@dagiserver \'uptime\''
-                }
+        }
+        stage("Second step"){
+            steps{
+                sh 'ssh root@dagiserver \'uptime\''
             }
         }
     }
